@@ -1,10 +1,13 @@
-﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
-// [345, 897, 568, 234] -> 2
+﻿/*
+Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+Напишите программу, которая покажет количество чётных чисел в массиве.
+[345, 897, 568, 234] -> 2
+*/
 
 
 using System.Data;
 
-int[] ThreeDigitArray (int length, int min, int max) // Создали шаблон массива
+int[] ThreeDigitArray (int length, int min, int max)
 {
     int[] arr = new int[length];
     Random rnd = new Random();
@@ -24,7 +27,7 @@ void PrintArray(int[] arr)
     }
 }
 
-int EvenNumbera(int[] arr)
+int EvenNumbers(int[] arr)
 {
     int even = 0;
     for(int i = 0; i < arr.Length; i++)
@@ -42,5 +45,5 @@ Console.Write("[");
 PrintArray(array);
 Console.Write("]");
 
-int EvenNumbers = EvenNumbera(array);
-Console.WriteLine($" -> {EvenNumbers}");
+int evenNumbers = EvenNumbers(array);
+Console.WriteLine($" -> {evenNumbers}");
